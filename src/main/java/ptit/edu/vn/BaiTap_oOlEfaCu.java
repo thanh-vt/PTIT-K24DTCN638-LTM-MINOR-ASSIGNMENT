@@ -54,6 +54,8 @@ public class BaiTap_oOlEfaCu {
                     c = (char) ('A' + (c - 'A' - s + 26) % 26);
                 } else if (c >= 'a' && c <= 'z') {
                     c = (char) ('a' + (c - 'a' - s + 26) % 26);
+                } else {
+                    decrypted.append(c);
                 }
 
                 decrypted.append(c);

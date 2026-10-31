@@ -3,7 +3,6 @@ package ptit.edu.vn;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.Socket;
-import java.util.Arrays;
 
 public class BaiTap_3UMDyoi6 {
     public static void main(String[] args) {
