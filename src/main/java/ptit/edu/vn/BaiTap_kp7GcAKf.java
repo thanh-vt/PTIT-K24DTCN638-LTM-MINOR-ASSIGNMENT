@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class BaiTapTcpCharacter {
+public class BaiTap_kp7GcAKf {
     public static void main(String[] args) {
         String host = "36.50.135.242"; // Thay bằng IP server thực tế
         int port = 2208;
@@ -18,9 +18,7 @@ public class BaiTapTcpCharacter {
         String studentCode = "K24DTCN638";
         String qCode = "kp7GcAKf";
 
-        try (
-                Socket socket = new Socket(host, port)
-        ) {
+        try (Socket socket = new Socket(host, port)) {
             // Thời gian chờ đọc dữ liệu tối đa 5 giây
             socket.setSoTimeout(5000);
 

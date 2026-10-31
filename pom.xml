@@ -13,5 +13,39 @@
         <maven.compiler.target>25</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+    <dependencies>
+        <!-- JAX-WS Runtime -->
+        <dependency>
+            <groupId>com.sun.xml.ws</groupId>
+            <artifactId>jaxws-rt</artifactId>
+            <version>4.0.3</version>
+        </dependency>
+    </dependencies>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.sun.xml.ws</groupId>
+                <artifactId>jaxws-maven-plugin</artifactId>
+                <version>4.0.3</version>
+                <configuration>
+                    <wsdlUrls>
+                        <wsdlUrl>
+                            http://36.50.135.242:2221/DataService?wsdl
+                        </wsdlUrl>
+                        <wsdlUrl>
+                            http://36.50.135.242:2221/CharacterService?wsdl
+                        </wsdlUrl>
+                    </wsdlUrls>
+                    <packageName>wsclient</packageName>
+                    <sourceDestDir>
+                        ${project.basedir}/src/main/java
+                    </sourceDestDir>
+                    <xnocompile>true</xnocompile>
+                    <keep>true</keep>
+                    <verbose>true</verbose>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
